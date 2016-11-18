@@ -18,10 +18,11 @@ public class StudentArray
 			students.add(new Student(information[0], information[1], information[2], information[3], information[4], information[5], information[6], information[7]));		
 			}
 		//System.out.println(students);
-		for(int i = 0; i < students.size(); i++)
-			{
-			System.out.print("Student " + (i+1) + ": ");
-			System.out.println(students.get(i));
-			}
+		// LOL IDIOT DONT KEEP THE PRINT IN THE FILL ARRAY METHOD
+//		for(int i = 0; i < students.size(); i++)
+//			{
+//			System.out.print("Student " + (i+1) + ": ");
+//			System.out.println(students.get(i));
+//			}
 		}
 	}
