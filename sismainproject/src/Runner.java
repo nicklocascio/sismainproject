@@ -6,6 +6,8 @@ public class Runner
 	public static Scanner userInput = new Scanner(System.in);
 	public static void main(String[] args) throws IOException
 		{
+		StudentArray.studentArray();
+		NicksClass.calculateGPA();
 		Scanner file = new Scanner (new File ("studentInformation.txt"));	
 		
 		System.out.println("What would you like to do? \n"
@@ -36,11 +38,11 @@ public class Runner
 				int input3 = userInput.nextInt();
 						if(input3 == 1)
 						{
-							//change grades
+						NicksClass.changeGrade();
 						}
 						else if(input3 == 2)
 						{
-							//switch classes
+						NicksClass.changeClass();
 						}
 						
 			}
@@ -52,11 +54,11 @@ public class Runner
 				int input4 = userInput.nextInt();
 						if(input4 == 1)
 						{
-							//sort by last name
+						NicksClass.sortLastName();
 						}
 						else if(input4 == 2)
 						{
-							//Sort by GPA
+						NicksClass.sortGPA();
 						}
 						else if(input4 == 3)
 						{
@@ -66,20 +68,17 @@ public class Runner
 							int input5 = userInput.nextInt();
 								if(input5 == 1)
 								{
-									//sort by period 1
+								NicksClass.sortClassPeriod1();
 								}
 								else if(input5 == 2)
 								{
-									//sort by period 2
+								NicksClass.sortClassPeriod2();
 								}
 								else if(input == 3)
 								{
-									//sort by period 3
-								}
-							
-						}
-						
-				
+								NicksClass.sortClassPeriod3();
+								}						
+						}										
 			}
 			
 		}
@@ -102,7 +101,7 @@ public class Runner
 			String classTres = userInput.nextLine();
 		System.out.println("What is the students grade in that class?");
 			String gradeTres = userInput.nextLine();
-		StudentArray.students.add(new Student(firstN, lastN, classUno, gradeUno, classDos, gradeDos, classTres, gradeTres));
+		StudentArray.students.add(new Student(firstN, lastN, classUno, gradeUno, classDos, gradeDos, classTres, gradeTres, 0));
 		for(Student s : StudentArray.students)
 		{
 			System.out.println(s);

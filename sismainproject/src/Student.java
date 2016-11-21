@@ -1,4 +1,3 @@
-
 public class Student
 	{
 	private String firstName;
@@ -9,7 +8,8 @@ public class Student
 	private String grade2;
 	private String class3;
 	private String grade3;
-	public Student(String a, String b, String c, String d, String e, String f, String g, String h)	
+	private double GPA;
+	public Student(String a, String b, String c, String d, String e, String f, String g, String h, double i)	
 		{
 		firstName = a;
 		lastName = b;
@@ -19,6 +19,7 @@ public class Student
 		grade2 = f;
 		class3 = g;
 		grade3 = h;
+		GPA = i;
 		}
 	public String getFirstName()
 		{
@@ -84,13 +85,21 @@ public class Student
 		{
 			this.grade3 = grade3;
 		}
+	public double getGPA()
+		{
+			return GPA;
+		}
+	public void setGPA(double gPA)
+		{
+			GPA = gPA;
+		}
+	
 	@Override
 	public String toString()
 		{
 		return "firstName = " + firstName + ", lastName = " + lastName + ", class1 = " + class1 + ", grade1 = "
-				+ grade1 + ", class2 = " + class2 + ", grade2 = " + grade2 + ", class3 = " + class3 + ", grade3 = " + grade3;
+				+ grade1 + ", class2 = " + class2 + ", grade2 = " + grade2 + ", class3 = " + class3 + ", grade3 = " + grade3 + ", GPA = " + GPA;
 		}	
 	
 	
 	}
-
