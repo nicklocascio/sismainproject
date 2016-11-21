@@ -15,7 +15,7 @@ public class StudentArray
 			String line = file.nextLine();
 			String[] information = line.split(" ");
 			//System.out.println(Arrays.toString(information));		
-			students.add(new Student(information[0], information[1], information[2], information[3], information[4], information[5], information[6], information[7]));		
+			students.add(new Student(information[0], information[1], information[2], information[3], information[4], information[5], information[6], information[7], 0));		
 			}
 		//System.out.println(students);
 		// LOL IDIOT DONT KEEP THE PRINT IN THE FILL ARRAY METHOD

@@ -380,14 +380,39 @@ public class NicksClass
 			
 			double total = (grade1 + grade2 + grade3);
 			double GPA = total/3;
-			System.out.println(GPA);
-			ArrayList <Student> GPAList = new ArrayList <Student>();
-			GPAList.add(new Student(StudentArray.students.get(i).getFirstName(), GPA));
-//			for(Student hi : GPAList)
-//				{
-//				System.out.println(hi);
-//				}
+			StudentArray.students.get(i).setGPA(GPA);			
 			//System.out.println(GPA);
-			}		
+			}	
+		// DONT FORGET TO DELETE THIS
+		for(Student hi : StudentArray.students)
+			{
+			System.out.println(hi);
+			}
 		}
+	//GPA ALMOST DONE 
+//	public static Comparator<Student> GPAComparator = new Comparator <Student>()
+//		{
+//		public int compare(Student s1, Student s2)
+//			{
+//			double StudentGPA1 = s1.getGPA();
+//			double StudentGPA2 = s2.getGPA();
+//			return StudentGPA1.compareTo(StudentGPA2);
+//			}
+//
+//		public int compare1(Student o1, Student o2)
+//			{
+//			// TODO Auto-generated method stub
+//			return 0;
+//			}
+//		};
+//		
+//	public static void sortLastName()
+//		{
+//		System.out.println("Sorting by last name: ");
+//		Collections.sort(StudentArray.students, LastNameComparator);
+//		for(int i = 0; i < StudentArray.students.size(); i++)
+//			{
+//			System.out.println(StudentArray.students.get(i).getFirstName() + " " + StudentArray.students.get(i).getLastName());
+//			}
+//		}
 	}

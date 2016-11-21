@@ -99,7 +99,7 @@ public class Student
 	public String toString()
 		{
 		return "firstName = " + firstName + ", lastName = " + lastName + ", class1 = " + class1 + ", grade1 = "
-				+ grade1 + ", class2 = " + class2 + ", grade2 = " + grade2 + ", class3 = " + class3 + ", grade3 = " + grade3;
+				+ grade1 + ", class2 = " + class2 + ", grade2 = " + grade2 + ", class3 = " + class3 + ", grade3 = " + grade3 + ", GPA = " + GPA;
 		}	
 	
 	
