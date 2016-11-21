@@ -1,3 +1,4 @@
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -380,39 +381,41 @@ public class NicksClass
 			
 			double total = (grade1 + grade2 + grade3);
 			double GPA = total/3;
-			StudentArray.students.get(i).setGPA(GPA);			
+			StudentArray.students.get(i).setGPA(GPA);
 			//System.out.println(GPA);
 			}	
 		// DONT FORGET TO DELETE THIS
-		for(Student hi : StudentArray.students)
+//		for(Student hi : StudentArray.students)
+//			{
+//			System.out.println(hi);
+//			}
+		}
+	
+	public static Comparator<Student> GPAComparator = new Comparator <Student>()
+		{
+		public int compare(Student s1, Student s2)
 			{
-			System.out.println(hi);
+			if(s1.getGPA() > s2.getGPA())
+				return -1;
+			else 
+				return 1;
+			}
+
+		public int compare1(Student o1, Student o2)
+			{
+			// TODO Auto-generated method stub
+			return 0;
+			}
+		};
+		
+	public static void sortGPA()
+		{
+		System.out.println("Sorting by GPA: ");
+		Collections.sort(StudentArray.students, GPAComparator);
+		for(int i = 0; i < StudentArray.students.size(); i++)
+			{
+			System.out.printf(StudentArray.students.get(i).getFirstName() + ": %.2f", StudentArray.students.get(i).getGPA());
+			System.out.println(" ");
 			}
 		}
-	//GPA ALMOST DONE 
-//	public static Comparator<Student> GPAComparator = new Comparator <Student>()
-//		{
-//		public int compare(Student s1, Student s2)
-//			{
-//			double StudentGPA1 = s1.getGPA();
-//			double StudentGPA2 = s2.getGPA();
-//			return StudentGPA1.compareTo(StudentGPA2);
-//			}
-//
-//		public int compare1(Student o1, Student o2)
-//			{
-//			// TODO Auto-generated method stub
-//			return 0;
-//			}
-//		};
-//		
-//	public static void sortLastName()
-//		{
-//		System.out.println("Sorting by last name: ");
-//		Collections.sort(StudentArray.students, LastNameComparator);
-//		for(int i = 0; i < StudentArray.students.size(); i++)
-//			{
-//			System.out.println(StudentArray.students.get(i).getFirstName() + " " + StudentArray.students.get(i).getLastName());
-//			}
-//		}
 	}
