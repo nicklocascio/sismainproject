@@ -97,8 +97,8 @@ public class Student
 	@Override
 	public String toString()
 		{
-		return "firstName = " + firstName + ", lastName = " + lastName + ", class1 = " + class1 + ", grade1 = "
-				+ grade1 + ", class2 = " + class2 + ", grade2 = " + grade2 + ", class3 = " + class3 + ", grade3 = " + grade3 + ", GPA = " + GPA;
+		return "First Name = " + firstName + ", Last Name = " + lastName + ", Class 1 = " + class1 + ", Grade 1 = "
+				+ grade1 + ", Class 2 = " + class2 + ", Grade 2 = " + grade2 + ", Class 3 = " + class3 + ", Grade 3 = " + grade3;
 		}	
 	
 	
